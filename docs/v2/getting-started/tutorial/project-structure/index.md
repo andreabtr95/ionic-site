@@ -65,7 +65,7 @@ In this component, we set the template to be the file at `app/app.html`, let's t
 Here's the main template for the app in `app/app.html`:
 
 ```html
-<ion-menu [content]="content">
+<ion-menu id="menu" [content]="content">
 
   <ion-toolbar>
     <ion-title>Pages</ion-title>
@@ -73,7 +73,7 @@ Here's the main template for the app in `app/app.html`:
 
   <ion-content>
     <ion-list>
-      <button ion-item *ng-for="#p of pages" (click)="openPage(p)">
+      <button ion-item *ngFor="#p of pages" (click)="openPage(p)">
         {% raw %}{{p.title}}{% endraw %}
       </button>
     </ion-list>
